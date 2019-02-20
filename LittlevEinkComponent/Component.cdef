@@ -1,0 +1,29 @@
+sources:
+{
+	LittlevEinkComponent.c
+}
+requires:
+{
+    component:
+    {
+        littlevLegatoComponent
+    }
+     lib:
+    {
+        liblv.so
+    }
+}
+
+
+cflags:
+{
+    -std=c99
+    -I${CURDIR}/../littlevLegatoComponent/littlevgl/lvgl
+    -I${CURDIR}/../littlevLegatoComponent/littlevgl/lv_drivers/display
+    
+}
+
+ldflags:
+{
+    -L${CURDIR}/../littlevLegatoComponent/littlevgl/build/
+}

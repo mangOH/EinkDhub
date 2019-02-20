@@ -1,0 +1,5 @@
+
+externalBuild:
+{
+    "make -C ${CURDIR}/littlevgl/ blddir=build}"
+}
