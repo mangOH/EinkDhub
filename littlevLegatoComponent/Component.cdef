@@ -1,5 +1,12 @@
+bundles:
+{
+    file:
+    {
+        littlevgl/liblv.so     /lib/
+    }
+}
 
 externalBuild:
 {
-    "make -C ${CURDIR}/littlevgl/ blddir=build}"
+    "make -C ${CURDIR}/littlevgl/ blddir=build"
 }

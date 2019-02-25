@@ -29,8 +29,8 @@
  *=====================*/
 
 /* Horizontal and vertical resolution of the library.*/
-#define LV_HOR_RES          (250)
-#define LV_VER_RES          (128)
+#define LV_HOR_RES          (128)
+#define LV_VER_RES          (250)
 #define LV_DPI              100
 
 /* Size of internal graphics buffer (required for buffered drawing)
@@ -103,7 +103,9 @@
  *    FONT USAGE
  *===================*/
 /*More info about fonts: https://littlevgl.com/basics#fonts*/
-#define LV_FONT_DEFAULT        &lv_font_dejavu_40     /*Always set a default font from the built-in fonts*/
+#define LV_FONT_DEFAULT &lv_font_monospace_8 /*Always set a default font from the built-in fonts*/
+
+#define USE_LV_FONT_MONOSPACE_8		   1
 
 #define USE_LV_FONT_DEJAVU_10              0
 #define USE_LV_FONT_DEJAVU_10_SUP          0
@@ -132,14 +134,14 @@
 #define USE_LV_FONT_SYMBOL_30_FILE         0
 #define USE_LV_FONT_SYMBOL_30_FEEDBACK     0
 
-#define USE_LV_FONT_DEJAVU_40              1
-#define USE_LV_FONT_DEJAVU_40_SUP          1
-#define USE_LV_FONT_DEJAVU_40_LATIN_EXT_A  1
-#define USE_LV_FONT_DEJAVU_40_LATIN_EXT_B  1
-#define USE_LV_FONT_DEJAVU_40_CYRILLIC     1
-#define USE_LV_FONT_SYMBOL_40_BASIC        1
-#define USE_LV_FONT_SYMBOL_40_FILE         1
-#define USE_LV_FONT_SYMBOL_40_FEEDBACK     1
+#define USE_LV_FONT_DEJAVU_40              0
+#define USE_LV_FONT_DEJAVU_40_SUP          0
+#define USE_LV_FONT_DEJAVU_40_LATIN_EXT_A  0
+#define USE_LV_FONT_DEJAVU_40_LATIN_EXT_B  0
+#define USE_LV_FONT_DEJAVU_40_CYRILLIC     0
+#define USE_LV_FONT_SYMBOL_40_BASIC        0
+#define USE_LV_FONT_SYMBOL_40_FILE         0
+#define USE_LV_FONT_SYMBOL_40_FEEDBACK     0
 
 #define USE_LV_FONT_DEJAVU_60              0
 #define USE_LV_FONT_DEJAVU_60_SUP          0
