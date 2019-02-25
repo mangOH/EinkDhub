@@ -1,0 +1,3 @@
+[submodule "littlevLegatoComponent/littlevgl/lvgl"]
+	path = littlevLegatoComponent/littlevgl/lvgl
+	url = https://github.com/littlevgl/lvgl
