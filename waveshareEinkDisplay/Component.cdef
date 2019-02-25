@@ -1,6 +1,6 @@
 sources:
 {
-	LittlevEinkComponent.c
+	waveshareEinkDisplay.c
 }
 requires:
 {
@@ -8,7 +8,7 @@ requires:
     {
         littlevLegatoComponent
     }
-     lib:
+    lib:
     {
         liblv.so
     }
@@ -25,5 +25,6 @@ cflags:
 
 ldflags:
 {
-    -L${CURDIR}/../littlevLegatoComponent/littlevgl/build/
+    -L${CURDIR}/../littlevLegatoComponent/littlevgl
 }
+

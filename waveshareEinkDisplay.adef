@@ -1,6 +1,6 @@
 executables:
 {
-	littleveink = ( LittlevEinkComponent )
+	waveshareeinkdisplay = ( waveshareEinkDisplay )
 }
 
 processes:
@@ -12,11 +12,20 @@ processes:
 
 	run:
 	{
-		( littleveink )
+		( waveshareeinkdisplay )
 	}
 
 	maxCoreDumpFileBytes: 512K
 	maxFileBytes: 512K
+}
+
+requires:
+{
+    device:
+	{
+		[rw] /dev/fb0 /dev/fb0
+      
+	}
 }
 
 version: 1.0.0
