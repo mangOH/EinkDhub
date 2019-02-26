@@ -1,13 +1,13 @@
 #
 # Makefile
 #
-CC = $(WP750X_TOOLCHAIN_DIR)/$(WP750X_TOOLCHAIN_PREFIX)gcc
+CC = $(TOOLCHAIN_DIR)/$(TOOLCHAIN_PREFIX)gcc
 CFLAGS = -Wall -Wshadow -Wundef -Wmaybe-uninitialized
-CFLAGS +=--sysroot=$(WP750X_SYSROOT)
+CFLAGS +=--sysroot=$(LEGATO_SYSROOT)
 CFLAGS += -O3 -g3 -I./
 CFLAGS += -fPIC
 #LDFLAGS += -lSDL2 -lm
-LDFLAGS += --sysroot=$(WP750X_SYSROOT) 
+LDFLAGS += --sysroot=$(LEGATO_SYSROOT) 
 BIN = demo
 VPATH = 
 
