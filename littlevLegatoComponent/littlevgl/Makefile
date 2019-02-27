@@ -1,15 +1,13 @@
 #
 # Makefile
 #
-CC = /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux/arm-poky-linux-gcc
+CC = $(TOOLCHAIN_DIR)/$(TOOLCHAIN_PREFIX)gcc
 CFLAGS = -Wall -Wshadow -Wundef -Wmaybe-uninitialized
-CFLAGS +=--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi 
+CFLAGS +=--sysroot=$(LEGATO_SYSROOT)
 CFLAGS += -O3 -g3 -I./
 CFLAGS += -fPIC
-#LDFLAGS += -lSDL2 -lm
-LDFLAGS += --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi 
-BIN = demo
-VPATH = 
+
+LDFLAGS += --sysroot=$(LEGATO_SYSROOT) 
 
 LVGL_DIR = ${shell pwd}
 
@@ -38,8 +36,6 @@ MAINOBJ = $(MAINSRC:.c=$(OBJEXT))
 SRCS = $(ASRCS) $(CSRCS) $(MAINSRC)
 OBJS = $(AOBJS) $(COBJS)
 
-blddir = build
-## MAINOBJ -> OBJFILES
 
 all: clean default
 
@@ -49,6 +45,7 @@ all: clean default
     
 default: $(AOBJS) $(COBJS) $(MAINOBJ)
 	$(CC) $(MAINOBJ) $(AOBJS) $(COBJS) $(LDFLAGS) -o liblv.so -shared
+
 
 clean: 
 	rm -f $(BIN) $(AOBJS) $(COBJS) $(MAINOBJ)
