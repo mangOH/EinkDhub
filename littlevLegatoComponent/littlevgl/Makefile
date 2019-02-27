@@ -1,13 +1,13 @@
 #
 # Makefile
 #
-CC = $(TOOLCHAIN_DIR)/$(TOOLCHAIN_PREFIX)gcc
+CC = /opt/swi/SWI9X15Y_07.13.05.00/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux/arm-poky-linux-gcc
 CFLAGS = -Wall -Wshadow -Wundef -Wmaybe-uninitialized
-CFLAGS +=--sysroot=$(LEGATO_SYSROOT)
+CFLAGS +=--sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi 
 CFLAGS += -O3 -g3 -I./
 CFLAGS += -fPIC
 #LDFLAGS += -lSDL2 -lm
-LDFLAGS += --sysroot=$(LEGATO_SYSROOT) 
+LDFLAGS += --sysroot=/opt/swi/SWI9X15Y_07.13.05.00/sysroots/armv7a-neon-poky-linux-gnueabi 
 BIN = demo
 VPATH = 
 
@@ -38,10 +38,7 @@ MAINOBJ = $(MAINSRC:.c=$(OBJEXT))
 SRCS = $(ASRCS) $(CSRCS) $(MAINSRC)
 OBJS = $(AOBJS) $(COBJS)
 
-
-#ifndef blddir
-#	blddir = build/output
-#endif
+blddir = build
 ## MAINOBJ -> OBJFILES
 
 all: clean default
@@ -52,13 +49,6 @@ all: clean default
     
 default: $(AOBJS) $(COBJS) $(MAINOBJ)
 	$(CC) $(MAINOBJ) $(AOBJS) $(COBJS) $(LDFLAGS) -o liblv.so -shared
-
-#.PHONY: move_output
-
-#move_output:
-#	-mkdir -p $(blddir)
-#	-mv $(MAINOBJ) $(blddir)
-#	-mv liblv.so $(blddir)
 
 clean: 
 	rm -f $(BIN) $(AOBJS) $(COBJS) $(MAINOBJ)
