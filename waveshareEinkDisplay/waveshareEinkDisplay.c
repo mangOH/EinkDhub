@@ -3,14 +3,14 @@
 #include "fbdev.h"
 #include "lv_conf.h"
 
-#define DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS (5)
+#define DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS (100)
 
 static void displayTimer
 (
 	le_timer_Ref_t displayTimerRef
 )
 {
-    	lv_tick_inc(5);
+	lv_tick_inc(5);
 	lv_task_handler();
 }
 
@@ -18,7 +18,7 @@ static void displayTimer
 COMPONENT_INIT
 {
 	LE_INFO("Start Eink LittlevGL.");
-    	lv_init();
+	lv_init();
 
 	/*Linux frame buffer device init*/
 	fbdev_init();
@@ -33,8 +33,8 @@ COMPONENT_INIT
 
 	//Display a label
 	lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
-	lv_label_set_text(label, "Hello World");
-	lv_obj_align(label, NULL, LV_ALIGN_CENTER, 0, 0);
+	lv_label_set_text(label, "Hello World!");
+	lv_obj_align(label, NULL, LV_LABEL_ALIGN_CENTER, 0, 0);
 
 	//Timer to display
 	le_timer_Ref_t displayTimerRef = le_timer_Create("Display Timer");
@@ -42,5 +42,4 @@ COMPONENT_INIT
 	le_timer_SetRepeat(displayTimerRef, 0);
 	le_timer_SetHandler(displayTimerRef, displayTimer);
 	le_timer_Start(displayTimerRef);
-
 }
