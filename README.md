@@ -13,7 +13,7 @@ This project demo how to integrate littlevlgl into legato app
       ```c
       #if 1 /*Set it to "1" to enable the content*/
 
-   * Update logical dimension of screenfor waveshare eink 2.13 Inch: 
+   * Update logical dimension of screen for waveshare eink 2.13 Inch: 
        ```c
        #define LV_HOR_RES          (128)
        #define LV_VER_RES          (250)
