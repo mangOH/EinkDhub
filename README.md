@@ -26,7 +26,7 @@ We have app tree as bellow:
       ```c
       #define LV_FONT_DEFAULT        &lv_font_monospace_8
       
-   * Enable font size 8 for monochome display and disable unsupport font: 
+   * Enable font size 8 for monochome display and disable unsupported font: 
       ```c
       #define USE_LV_FONT_DEJAVU_10              0
       #define USE_LV_FONT_DEJAVU_10_LATIN_SUP    0
