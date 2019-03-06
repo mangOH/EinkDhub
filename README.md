@@ -58,6 +58,6 @@ We have app tree as bellow:
     * Enable config content by set:
       ```c
       #if 1 /*Set it to "1" to enable the content*/
-    * Add  
+    * Update USE_FBDEV is 1 for using framebuffer device
       ```c
-      #define USE_FBDEV 1
+      #define USE_FBDEV         1
