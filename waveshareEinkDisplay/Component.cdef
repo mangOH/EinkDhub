@@ -18,6 +18,7 @@ requires:
 cflags:
 {
     -std=c99
+    -I${CURDIR}/../littlevLegatoComponent/littlevgl
     -I${CURDIR}/../littlevLegatoComponent/littlevgl/lvgl
     -I${CURDIR}/../littlevLegatoComponent/littlevgl/lv_drivers/display
     
