@@ -54,3 +54,10 @@ We have app tree as bellow:
       ```c
       #define LV_COLOR_DEPTH     1                     /*Color depth: 1/8/16/32*/
      
+3. Update configure file `lv_drv_conf.h` for framebuffer:
+    * Enable config content by set:
+      ```c
+      #if 1 /*Set it to "1" to enable the content*/
+    * Add  
+      ```c
+      #define USE_FBDEV 1
