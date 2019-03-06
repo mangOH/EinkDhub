@@ -37,8 +37,8 @@ COMPONENT_INIT
 
     // Timer to display
     le_timer_Ref_t displayTimerRef = le_timer_Create("Display Timer");
-    le_timer_SetMsInterval(displayTimerRef, DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS);
-    le_timer_SetRepeat(displayTimerRef, 0);
-    le_timer_SetHandler(displayTimerRef, DisplayTimerHandler);
-    le_timer_Start(displayTimerRef);
+    LE_ASSERT_OK(le_timer_SetMsInterval(displayTimerRef, DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS));
+    LE_ASSERT_OK(le_timer_SetRepeat(displayTimerRef, 0));
+    LE_ASSERT_OK(le_timer_SetHandler(displayTimerRef, DisplayTimerHandler));
+    LE_ASSERT_OK(le_timer_Start(displayTimerRef));
 }
