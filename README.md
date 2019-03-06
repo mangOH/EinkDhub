@@ -7,6 +7,7 @@ This project demo how to integrate littlevlgl into legato app
     * lvgl drivers: https://github.com/littlevgl/lv_drivers
     * Copy `lvgl/lv_conf_templ.h` change the name to `lv_conf.h` and place next to the lvgl folder  
     * Copy `lv_drivers/lv_drv_conf_templ.h` change the name to `lv_drv_conf.h` and place next to the lvgl folder   
+    
 2. Update configure file `lv_conf.h` for monochome display:
    * Enable config content by set:
       ```c
