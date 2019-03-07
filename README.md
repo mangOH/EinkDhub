@@ -14,7 +14,7 @@ dependencies are referenced by this repository as git submodules.
       #define LV_HOR_RES          (128)
       #define LV_VER_RES          (250)
       ```
-   1. Update default font type to use monochome font:
+   1. Update default font type to use monochrome font:
       ```c
       #define LV_FONT_DEFAULT        &lv_font_monospace_8
       ```
