@@ -3,14 +3,14 @@
 #include "fbdev.h"
 #include "lv_conf.h"
 
-#define DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS (100)
+#define DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS (5)
 
 static void DisplayTimerHandler
 (
     le_timer_Ref_t displayTimerRef
 )
 {
-    lv_tick_inc(5);
+    lv_tick_inc(DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS);
     lv_task_handler();
 }
 
