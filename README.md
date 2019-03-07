@@ -11,7 +11,7 @@ dependencies are referenced by this repository as git submodules.
    1. At the top of the file, change the `#if 0` to `#if 1` to enable the file
    1. Update logical dimension of screen for waveshare eink 2.13 Inch:
       ```c
-      #define LV_HOR_RES          (128)
+      #define LV_HOR_RES          (122)
       #define LV_VER_RES          (250)
       ```
    1. Update default font type to use monochrome font:
