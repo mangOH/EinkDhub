@@ -18,7 +18,7 @@ dependencies are referenced by this repository as git submodules.
       ```c
       #define LV_FONT_DEFAULT        &lv_font_monospace_8
       ```
-   1. Enable font size 8 for monochome display and disable unsupported font:
+   1. Enable font size 8 for monochrome display and disable unsupported font:
       ```c
       #define USE_LV_FONT_DEJAVU_10              0
       #define USE_LV_FONT_DEJAVU_10_LATIN_SUP    0
