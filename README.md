@@ -52,7 +52,7 @@ dependencies are referenced by this repository as git submodules.
       ```c
       #define USE_FBDEV         1
       ```
-1. In `/lv_drivers/fbdev.c` update function `fbdev_flush` for  /*1 bit per pixel*/
+1. In `littlevLegatoComponent/littlevgl/lv_drivers/fbdev.c` update function `fbdev_flush` for 1 bit per pixel case
       ```c
       fbp8[byte_location] &= ~(((uint8_t)(128)) >> bit_location);
       fbp8[byte_location] |= ((uint8_t)(color_p->full << 7)) >> bit_location;
