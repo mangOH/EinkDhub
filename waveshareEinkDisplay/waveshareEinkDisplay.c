@@ -5,14 +5,14 @@
 
 #define DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS (5)
 
-static void DisplayTimerHandler
-(
-    le_timer_Ref_t displayTimerRef
-)
-{
-    lv_tick_inc(DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS);
-    lv_task_handler();
-}
+// static void DisplayTimerHandler
+// (
+//     le_timer_Ref_t displayTimerRef
+// )
+// {
+//     lv_tick_inc(DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS);
+//     lv_task_handler();
+// }
 
 COMPONENT_INIT
 {
@@ -36,9 +36,15 @@ COMPONENT_INIT
     lv_obj_align(label, NULL, LV_LABEL_ALIGN_CENTER, 0, 0);
 
     // Timer to display
-    le_timer_Ref_t displayTimerRef = le_timer_Create("Display Timer");
-    LE_ASSERT_OK(le_timer_SetMsInterval(displayTimerRef, DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS));
-    LE_ASSERT_OK(le_timer_SetRepeat(displayTimerRef, 0));
-    LE_ASSERT_OK(le_timer_SetHandler(displayTimerRef, DisplayTimerHandler));
-    LE_ASSERT_OK(le_timer_Start(displayTimerRef));
+    // le_timer_Ref_t displayTimerRef = le_timer_Create("Display Timer");
+    // LE_ASSERT_OK(le_timer_SetMsInterval(displayTimerRef, DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS));
+    // LE_ASSERT_OK(le_timer_SetRepeat(displayTimerRef, 0));
+    // LE_ASSERT_OK(le_timer_SetHandler(displayTimerRef, DisplayTimerHandler));
+    // LE_ASSERT_OK(le_timer_Start(displayTimerRef));
+
+    for(int i = 0; i<4 ; i++)
+    {
+        lv_tick_inc(DISPLAY_SAMPLE_INTERVAL_IN_MILLISECONDS);
+        lv_task_handler();
+    }
 }
