@@ -1,13 +1,18 @@
 sources:
 {
-    waveshareEinkDisplay.c
+    EinkDhubIf.c
 }
 
 requires:
 {
+    api:
+    {
+        dhubIO = io.api
+    }
+
     component:
     {
-        littlevLegatoComponent
+        ${CURDIR}/../littlevLegatoComponent
     }
     lib:
     {

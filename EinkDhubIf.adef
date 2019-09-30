@@ -1,0 +1,42 @@
+sandboxed: false
+
+executables:
+{
+	EinkDhubIf = ( EinkDhubIfComponent )
+}
+
+processes:
+{
+	run:
+	{
+		( EinkDhubIf )
+	}
+
+	faultAction: stopApp
+	maxCoreDumpFileBytes: 512K
+	maxFileBytes: 512K
+}
+
+extern:
+{
+    EinkDhubIf.EinkDhubIfComponent.dhubIO  // required API
+}
+
+requires:
+{
+    // Add this back in after the Legato 19.07 fix for Jira ticket LE-13549
+    // Legato 19.07 removes the modules before the app - for a user-space
+    // shared kernel space as a framebuffer device this will crash the kernel.
+    // Once Legato fixes uncomment.
+    //kernelModules:
+    //{
+        //$CURDIR/../../linux_kernel_modules/mangOH_yellow_ws213.mdef
+    //}
+
+    device:
+	{
+		[rw] /dev/fb0 /dev/fb0
+	}
+
+}
+
