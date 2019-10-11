@@ -4,6 +4,3 @@ littlevLegatoComponent/littlevgl/*.o
 # Ignore the shared library created by the build
 littlevLegatoComponent/littlevgl/liblv.so
 
-# Ignore config files copied by the user
-littlevLegatoComponent/littlevgl/lv_conf.h
-littlevLegatoComponent/littlevgl/lv_drv_conf.h
