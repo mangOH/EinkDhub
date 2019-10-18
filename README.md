@@ -1,4 +1,4 @@
-# Experimental dhub app that displays simple strings on a Framebuffer device
+# Experimental dhub app that displays simple strings on a Framebuffer device assuming Eink
 
 Integration of LittlevGL graphics library with Dhub interface app to allow
 writes to a Framebuffer device. So far tested with Waveshare 2.13

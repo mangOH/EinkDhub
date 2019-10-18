@@ -20,10 +20,10 @@
 
 // Our Hack in timings for refresh and Eink write time waits
 #define NUM_LV_TICKS_REFRESH_HACK	4
-#define NUM_SECS_EINK_WRITE_WAIT_HACK	20
+#define NUM_SECS_EINK_WRITE_WAIT_HACK	10
 
 // for dhub
-#define RES_PATH_WRITE_EINK     "writeEink"
+#define RES_PATH_WRITE_EINK     "value"
 
 
 static lv_obj_t * label;

@@ -1,6 +1,6 @@
 sources:
 {
-    EinkDhubIf.c
+    einkDhubIf.c
 }
 
 requires:

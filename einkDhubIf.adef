@@ -2,14 +2,14 @@ sandboxed: false
 
 executables:
 {
-	EinkDhubIf = ( EinkDhubIfComponent )
+	einkDhubIf = ( einkDhubIfComponent )
 }
 
 processes:
 {
 	run:
 	{
-		( EinkDhubIf )
+		( einkDhubIf )
 	}
 
 	faultAction: stopApp
@@ -19,7 +19,7 @@ processes:
 
 extern:
 {
-    EinkDhubIf.EinkDhubIfComponent.dhubIO  // required API
+    einkDhubIf.einkDhubIfComponent.dhubIO  // required API
 }
 
 requires:
